@@ -1,12 +1,760 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Experience</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transformational Wellness Workshops - Unlock Your Authentic Voice">
+    <title>Unlock Your Authentic Voice - Wellness Workshop Experience</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Georgia', 'Garamond', serif;
+            color: #3d3d3d;
+            background-color: #e8dcc8;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(183, 150, 100, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(160, 130, 90, 0.15) 0%, transparent 50%);
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.15)), url('hero.jpg') center/cover;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            max-width: 700px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            letter-spacing: 1px;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            font-style: italic;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #d97036, #e8844a);
+            color: white;
+            padding: 16px 45px;
+            font-size: 1.05rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(217, 112, 54, 0.3);
+            font-family: 'Georgia', serif;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(217, 112, 54, 0.5);
+            background: linear-gradient(135deg, #e8844a, #f0956d);
+        }
+
+        .hero-credit {
+            margin-top: 35px;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.95);
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 120px 40px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(to bottom, rgba(232, 220, 200, 0.4), rgba(232, 220, 200, 0.7));
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: #3d3d3d;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: #5a5a5a;
+            margin-bottom: 40px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .about p {
+            font-size: 1.05rem;
+            color: #4a4a4a;
+            line-height: 1.9;
+            margin-bottom: 20px;
+            letter-spacing: 0.3px;
+        }
+
+        /* Programs Section */
+        .programs {
+            padding: 120px 40px;
+            background: linear-gradient(135deg, rgba(200, 170, 130, 0.1), rgba(180, 150, 110, 0.15));
+        }
+
+        .programs-container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .programs h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: #3d3d3d;
+            margin-bottom: 80px;
+            letter-spacing: 1px;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .program-card {
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            backdrop-filter: blur(10px);
+        }
+
+        .program-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 0.85);
+        }
+
+        .program-image-wrapper {
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .program-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .program-card:hover .program-image {
+            transform: scale(1.08);
+        }
+
+        .program-content {
+            padding: 35px 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .program-card h3 {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #3d3d3d;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .program-card .subtitle {
+            font-size: 0.95rem;
+            color: #8b7355;
+            margin-bottom: 20px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .program-card ul {
+            list-style: none;
+            flex: 1;
+            margin-bottom: 25px;
+        }
+
+        .program-card li {
+            padding: 7px 0;
+            padding-left: 22px;
+            position: relative;
+            font-size: 0.9rem;
+            color: #5a5a5a;
+            line-height: 1.7;
+        }
+
+        .program-card li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #d97036;
+            font-weight: bold;
+        }
+
+        .program-price {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #d97036;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(217, 112, 54, 0.2);
+            letter-spacing: 0.5px;
+        }
+
+        /* Facilitators Section */
+        .facilitators {
+            padding: 120px 40px;
+            background: linear-gradient(to bottom, rgba(232, 220, 200, 0.5), rgba(232, 220, 200, 0.3));
+        }
+
+        .facilitators-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .facilitators h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: #3d3d3d;
+            margin-bottom: 80px;
+            letter-spacing: 1px;
+        }
+
+        .facilitators-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 60px;
+        }
+
+        .facilitator-card {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.5s ease;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 30px;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .facilitator-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .facilitator-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border: 3px solid rgba(217, 112, 54, 0.3);
+        }
+
+        .facilitator-info h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #3d3d3d;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .facilitator-info p {
+            font-size: 1rem;
+            color: #5a5a5a;
+            line-height: 1.8;
+            letter-spacing: 0.3px;
+        }
+
+        /* Booking Section */
+        .booking {
+            padding: 120px 40px;
+            background: linear-gradient(135deg, rgba(200, 170, 130, 0.1), rgba(180, 150, 110, 0.15));
+        }
+
+        .booking-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .booking h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: #3d3d3d;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .booking .section-subtitle {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #3d3d3d;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid rgba(217, 112, 54, 0.2);
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: 'Georgia', serif;
+            background: rgba(255, 255, 255, 0.9);
+            color: #3d3d3d;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #d97036;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(217, 112, 54, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 10px;
+            background: linear-gradient(135deg, #d97036, #e8844a);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(217, 112, 54, 0.3);
+            font-family: 'Georgia', serif;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(217, 112, 54, 0.5);
+            background: linear-gradient(135deg, #e8844a, #f0956d);
+        }
+
+        /* Footer */
+        footer {
+            background: #3d3d3d;
+            color: #d97036;
+            padding: 40px;
+            text-align: center;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero {
+                background-attachment: scroll;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .facilitator-card {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                text-align: center;
+            }
+
+            .facilitator-image {
+                margin: 0 auto;
+            }
+
+            .facilitators-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .programs h2 {
+                font-size: 2.2rem;
+                margin-bottom: 60px;
+            }
+
+            .facilitators h2 {
+                font-size: 2.2rem;
+                margin-bottom: 60px;
+            }
+
+            .about {
+                padding: 80px 30px;
+            }
+
+            .programs {
+                padding: 80px 30px;
+            }
+
+            .facilitators {
+                padding: 80px 30px;
+            }
+
+            .booking {
+                padding: 80px 30px;
+            }
+
+            .booking-container {
+                padding: 40px 25px;
+            }
+
+            .program-card {
+                margin: 0 auto;
+                max-width: 400px;
+            }
+
+            .program-content {
+                padding: 30px 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                height: auto;
+                min-height: 100vh;
+                padding: 20px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 13px 35px;
+                font-size: 0.95rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .programs h2 {
+                font-size: 1.8rem;
+                margin-bottom: 40px;
+            }
+
+            .facilitators h2 {
+                font-size: 1.8rem;
+                margin-bottom: 40px;
+            }
+
+            .programs-grid {
+                gap: 25px;
+            }
+
+            .facilitators-grid {
+                gap: 30px;
+            }
+
+            .program-image-wrapper {
+                height: 180px;
+            }
+
+            .facilitator-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .about {
+                padding: 60px 20px;
+            }
+
+            .programs {
+                padding: 60px 20px;
+            }
+
+            .facilitators {
+                padding: 60px 20px;
+            }
+
+            .booking {
+                padding: 60px 20px;
+            }
+
+            .booking-container {
+                padding: 30px 20px;
+            }
+
+            .booking h2 {
+                font-size: 1.8rem;
+            }
+
+            .facilitator-card {
+                padding: 25px;
+            }
+
+            .program-content {
+                padding: 25px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Experience</h1>
-    <img src="hero.jpeg" alt="Hero Image">
-    <p>Some content about my experience.</p>
-    <img src="program2.png" alt="Program 2">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Unlock Your Authentic Voice & Step Into Your Power</h1>
+            <p>Transformational Workshops for Wellness & Conscious Festivals</p>
+            <a href="#booking" class="cta-button">Book the Full Experience</a>
+            <p class="hero-credit">Yllka & Vlera</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2 class="section-title">About the Experience</h2>
+        <p class="section-subtitle">We offer immersive workshops designed for wellness and transformational festivals.</p>
+        <p>Our programs guide participants through breath, voice, movement and subconscious exploration to release emotional blockages and reconnect with their authentic expression.</p>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs">
+        <div class="programs-container">
+            <h2>Our Programs</h2>
+            <div class="programs-grid">
+                <!-- Program 1 -->
+                <div class="program-card">
+                    <div class="program-image-wrapper">
+                        <img src="program1.jpg" alt="Yoga & Meditation for Presence" class="program-image">
+                    </div>
+                    <div class="program-content">
+                        <h3>Yoga & Meditation for Presence</h3>
+                        <p class="subtitle">with Yllka</p>
+                        <ul>
+                            <li>Body awareness</li>
+                            <li>Breath Connection</li>
+                            <li>Nervous system reset</li>
+                            <li>Deep relaxation</li>
+                        </ul>
+                        <div class="program-price">Investment: €555</div>
+                    </div>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="program-card">
+                    <div class="program-image-wrapper">
+                        <img src="program2.jpg" alt="Unlock Your Authentic Voice" class="program-image">
+                    </div>
+                    <div class="program-content">
+                        <h3>Unlock Your Authentic Voice & Step Into Your Power</h3>
+                        <p class="subtitle">with Vlera & Yllka</p>
+                        <ul>
+                            <li>Breath activation</li>
+                            <li>Short voice-opening hypnosis</li>
+                            <li>Voice activation</li>
+                            <li>Sound & movement</li>
+                            <li>Emotional release</li>
+                        </ul>
+                        <div class="program-price">Investment: €888</div>
+                    </div>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="program-card">
+                    <div class="program-image-wrapper">
+                        <img src="program3.jpg" alt="Collective Quantum Hypnosis Journey" class="program-image">
+                    </div>
+                    <div class="program-content">
+                        <h3>Collective Quantum Hypnosis Journey</h3>
+                        <p class="subtitle">with Yllka</p>
+                        <ul>
+                            <li>Inner child healing</li>
+                            <li>Heart opening</li>
+                            <li>Anxiety release</li>
+                            <li>Nervous system reset</li>
+                            <li>Somatic healing</li>
+                        </ul>
+                        <div class="program-price">Investment: €777</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilitators Section -->
+    <section class="facilitators">
+        <div class="facilitators-container">
+            <h2>Festival Booking Options</h2>
+            <div class="facilitators-grid">
+                <!-- Yllka -->
+                <div class="facilitator-card">
+                    <img src="yllka.jpg" alt="Yllka" class="facilitator-image">
+                    <div class="facilitator-info">
+                        <h3>Yllka</h3>
+                        <p>Yoga instructor and hypnosis practitioner guiding participants through breath, subconscious exploration and emotional healing.</p>
+                    </div>
+                </div>
+
+                <!-- Vlera -->
+                <div class="facilitator-card">
+                    <img src="vlera.jpg" alt="Vlera" class="facilitator-image">
+                    <div class="facilitator-info">
+                        <h3>Vlera</h3>
+                        <p>Voice activation and sound facilitator helping participants reconnect with their authentic expression through vibration and sound.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking" id="booking">
+        <div class="booking-container">
+            <h2>Book Your Experience</h2>
+            <p class="section-subtitle">Fill in your details below and we'll get back to you shortly</p>
+            
+            <form>
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="program">Select Program *</label>
+                    <select id="program" name="program" required>
+                        <option value="">-- Choose a Program --</option>
+                        <option value="Yoga & Meditation">Yoga & Meditation for Presence - €555</option>
+                        <option value="Voice Activation">Unlock Your Authentic Voice & Step Into Your Power - €888</option>
+                        <option value="Quantum Hypnosis">Collective Quantum Hypnosis Journey - €777</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Special Requests or Questions</label>
+                    <textarea id="message" name="message" placeholder="Tell us anything we should know..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Book My Experience</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Wellness Workshop Experience. All rights reserved. | Unlock Your Authentic Voice & Step Into Your Power</p>
+    </footer>
 </body>
 </html>
