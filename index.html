@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Transformational Wellness Workshops - Unlock Your Authentic Voice">
-    <title>Unlock Your Authentic Voice - Wellness Workshop Experience</title>
+    <meta name="description" content="A Unique Transformational Wellness Experience for Festivals">
+    <title>A Unique Transformational Wellness Experience for Festivals</title>
     <style>
         * {
             margin: 0;
@@ -97,6 +97,10 @@
             background: linear-gradient(135deg, #e8844a, #f0956d);
         }
 
+        .cta-button:active {
+            transform: translateY(-1px);
+        }
+
         .hero-credit {
             margin-top: 35px;
             font-size: 1.1rem;
@@ -108,8 +112,8 @@
         /* About Section */
         .about {
             padding: 120px 40px;
-            text-align: center;
-            max-width: 900px;
+            text-align: left;
+            max-width: 1000px;
             margin: 0 auto;
             background: linear-gradient(to bottom, rgba(232, 220, 200, 0.4), rgba(232, 220, 200, 0.7));
         }
@@ -118,8 +122,9 @@
             font-size: 2.8rem;
             font-weight: 400;
             color: #3d3d3d;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             letter-spacing: 1px;
+            text-align: center;
         }
 
         .section-subtitle {
@@ -128,14 +133,23 @@
             margin-bottom: 40px;
             font-weight: 400;
             font-style: italic;
+            text-align: center;
         }
 
         .about p {
             font-size: 1.05rem;
             color: #4a4a4a;
             line-height: 1.9;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             letter-spacing: 0.3px;
+        }
+
+        .about-label {
+            font-weight: 700;
+            color: #3d3d3d;
+            display: block;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
         }
 
         /* Programs Section */
@@ -245,16 +259,6 @@
             left: 0;
             color: #d97036;
             font-weight: bold;
-        }
-
-        .program-price {
-            font-size: 1.6rem;
-            font-weight: 400;
-            color: #d97036;
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(217, 112, 54, 0.2);
-            letter-spacing: 0.5px;
         }
 
         /* Facilitators Section */
@@ -397,6 +401,46 @@
             min-height: 100px;
         }
 
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: flex-start;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 12px 15px;
+            border-radius: 6px;
+            border: 1px solid rgba(217, 112, 54, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .checkbox-item:hover {
+            border-color: #d97036;
+            background: white;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            margin-top: 2px;
+            cursor: pointer;
+            accent-color: #d97036;
+            flex-shrink: 0;
+        }
+
+        .checkbox-item label {
+            margin: 0;
+            flex: 1;
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+
         .form-group button {
             width: 100%;
             padding: 14px;
@@ -420,6 +464,10 @@
             background: linear-gradient(135deg, #e8844a, #f0956d);
         }
 
+        .form-group button:active {
+            transform: translateY(0px);
+        }
+
         /* Footer */
         footer {
             background: #3d3d3d;
@@ -430,7 +478,7 @@
             letter-spacing: 0.5px;
         }
 
-        /* Responsive Design */
+        /* MOBILE OPTIMIZATIONS */
         @media (max-width: 1024px) {
             .hero {
                 background-attachment: scroll;
@@ -458,12 +506,29 @@
         }
 
         @media (max-width: 768px) {
+            .hero {
+                height: 70vh;
+                padding: 30px 20px;
+            }
+
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
+                margin-bottom: 12px;
             }
 
             .hero p {
-                font-size: 1.1rem;
+                font-size: 0.95rem;
+                margin-bottom: 25px;
+            }
+
+            .cta-button {
+                padding: 13px 32px;
+                font-size: 0.95rem;
+            }
+
+            .hero-credit {
+                margin-top: 25px;
+                font-size: 0.95rem;
             }
 
             .section-title {
@@ -482,6 +547,7 @@
 
             .about {
                 padding: 80px 30px;
+                text-align: left;
             }
 
             .programs {
@@ -502,36 +568,74 @@
 
             .program-card {
                 margin: 0 auto;
-                max-width: 400px;
+                max-width: 100%;
             }
 
             .program-content {
                 padding: 30px 25px;
             }
+
+            .programs-grid {
+                gap: 30px;
+            }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 600px) {
             .hero {
-                height: auto;
-                min-height: 100vh;
-                padding: 20px;
+                height: 60vh;
+                padding: 20px 15px;
+            }
+
+            .hero-content {
+                max-width: 100%;
             }
 
             .hero h1 {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
+                margin-bottom: 10px;
+                line-height: 1.2;
             }
 
             .hero p {
-                font-size: 1rem;
+                font-size: 0.85rem;
+                margin-bottom: 20px;
+                line-height: 1.4;
             }
 
             .cta-button {
-                padding: 13px 35px;
-                font-size: 0.95rem;
+                padding: 12px 28px;
+                font-size: 0.9rem;
+                border-radius: 40px;
+            }
+
+            .hero-credit {
+                margin-top: 20px;
+                font-size: 0.85rem;
             }
 
             .section-title {
                 font-size: 1.8rem;
+                margin-bottom: 15px;
+            }
+
+            .section-subtitle {
+                font-size: 1.05rem;
+                margin-bottom: 30px;
+            }
+
+            .about {
+                padding: 60px 20px;
+                text-align: left;
+            }
+
+            .about p {
+                font-size: 0.95rem;
+                line-height: 1.7;
+            }
+
+            .about-label {
+                font-size: 1rem;
+                margin-bottom: 12px;
             }
 
             .programs h2 {
@@ -539,21 +643,43 @@
                 margin-bottom: 40px;
             }
 
+            .programs-grid {
+                gap: 20px;
+            }
+
+            .program-image-wrapper {
+                height: 180px;
+            }
+
+            .program-content {
+                padding: 25px 20px;
+            }
+
+            .program-card h3 {
+                font-size: 1.15rem;
+            }
+
+            .program-card .subtitle {
+                font-size: 0.85rem;
+            }
+
+            .program-card li {
+                font-size: 0.85rem;
+                padding-left: 20px;
+            }
+
             .facilitators h2 {
                 font-size: 1.8rem;
                 margin-bottom: 40px;
             }
 
-            .programs-grid {
-                gap: 25px;
+            .facilitators {
+                padding: 60px 20px;
             }
 
-            .facilitators-grid {
-                gap: 30px;
-            }
-
-            .program-image-wrapper {
-                height: 180px;
+            .facilitator-card {
+                padding: 25px 20px;
+                gap: 20px;
             }
 
             .facilitator-image {
@@ -561,16 +687,14 @@
                 height: 150px;
             }
 
-            .about {
-                padding: 60px 20px;
+            .facilitator-info h3 {
+                font-size: 1.4rem;
+                margin-bottom: 10px;
             }
 
-            .programs {
-                padding: 60px 20px;
-            }
-
-            .facilitators {
-                padding: 60px 20px;
+            .facilitator-info p {
+                font-size: 0.9rem;
+                line-height: 1.6;
             }
 
             .booking {
@@ -579,18 +703,89 @@
 
             .booking-container {
                 padding: 30px 20px;
+                max-width: 100%;
             }
 
             .booking h2 {
                 font-size: 1.8rem;
+                margin-bottom: 12px;
             }
 
-            .facilitator-card {
-                padding: 25px;
+            .booking .section-subtitle {
+                font-size: 1rem;
+                margin-bottom: 30px;
             }
 
-            .program-content {
-                padding: 25px 20px;
+            .form-group label {
+                font-size: 0.95rem;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 11px 12px;
+                font-size: 16px;
+            }
+
+            .form-group button {
+                padding: 12px;
+                font-size: 1rem;
+                margin-top: 8px;
+            }
+
+            .checkbox-item {
+                padding: 10px 12px;
+            }
+
+            .checkbox-item input[type="checkbox"] {
+                width: 18px;
+                height: 18px;
+            }
+
+            .checkbox-item label {
+                font-size: 0.9rem;
+            }
+
+            .programs {
+                padding: 60px 20px;
+            }
+
+            footer {
+                padding: 30px 20px;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero {
+                height: 55vh;
+                min-height: 500px;
+            }
+
+            .hero h1 {
+                font-size: 1.4rem;
+            }
+
+            .hero p {
+                font-size: 0.8rem;
+            }
+
+            .cta-button {
+                padding: 11px 24px;
+                font-size: 0.85rem;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .program-image-wrapper {
+                height: 150px;
+            }
+
+            .facilitator-image {
+                width: 120px;
+                height: 120px;
             }
         }
     </style>
@@ -599,9 +794,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Unlock Your Authentic Voice & Step Into Your Power</h1>
-            <p>Transformational Workshops for Wellness & Conscious Festivals</p>
-            <a href="#booking" class="cta-button">Book the Full Experience</a>
+            <h1>A Unique Transformational Wellness Experiences for Festivals</h1>
+            <p>Reconnect with yourself in a safe, non-judgmental space</p>
+            <a href="#booking" class="cta-button">Book Your Experience</a>
             <p class="hero-credit">Yllka & Vlera</p>
         </div>
     </section>
@@ -609,8 +804,13 @@
     <!-- About Section -->
     <section class="about">
         <h2 class="section-title">About the Experience</h2>
-        <p class="section-subtitle">We offer immersive workshops designed for wellness and transformational festivals.</p>
-        <p>Our programs guide participants through breath, voice, movement and subconscious exploration to release emotional blockages and reconnect with their authentic expression.</p>
+        
+        <span class="about-label">We offer:</span>
+        <p>We create a safe, non-judgmental space where participants can step out of the sensory intensity of a festival and reconnect with themselves.</p>
+
+        <p>Our programs work with the natural energetics of the body, guiding participants from deep nervous system regulation and theta brainwave states into activation, expression and connection.</p>
+
+        <p>Festival staff are also warmly welcome to join, recharge their energy and take a moment to come back to balance.</p>
     </section>
 
     <!-- Programs Section -->
@@ -621,18 +821,17 @@
                 <!-- Program 1 -->
                 <div class="program-card">
                     <div class="program-image-wrapper">
-                        <img src="program1.jpg" alt="Yoga & Meditation for Presence" class="program-image">
+                        <img src="program1.jpg" alt="Ground & Recharge" class="program-image">
                     </div>
                     <div class="program-content">
-                        <h3>Yoga & Meditation for Presence</h3>
-                        <p class="subtitle">with Yllka</p>
+                        <h3>Ground & Recharge</h3>
+                        <p class="subtitle">Yoga & Meditation Journeys</p>
                         <ul>
-                            <li>Body awareness</li>
-                            <li>Breath Connection</li>
-                            <li>Nervous system reset</li>
+                            <li>Nervous system regulation</li>
                             <li>Deep relaxation</li>
+                            <li>Gentle body awakening</li>
+                            <li>Breath and body connection</li>
                         </ul>
-                        <div class="program-price">Investment: €555</div>
                     </div>
                 </div>
 
@@ -643,15 +842,13 @@
                     </div>
                     <div class="program-content">
                         <h3>Unlock Your Authentic Voice & Step Into Your Power</h3>
-                        <p class="subtitle">with Vlera & Yllka</p>
+                        <p class="subtitle">Hypnosis Journey</p>
                         <ul>
-                            <li>Breath activation</li>
-                            <li>Short voice-opening hypnosis</li>
-                            <li>Voice activation</li>
-                            <li>Sound & movement</li>
+                            <li>Voice Alchemy</li>
+                            <li>Somatic & Ancestral Movement</li>
+                            <li>Code Activation</li>
                             <li>Emotional release</li>
                         </ul>
-                        <div class="program-price">Investment: €888</div>
                     </div>
                 </div>
 
@@ -670,7 +867,6 @@
                             <li>Nervous system reset</li>
                             <li>Somatic healing</li>
                         </ul>
-                        <div class="program-price">Investment: €777</div>
                     </div>
                 </div>
             </div>
@@ -726,18 +922,21 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="program">Select Program *</label>
-                    <select id="program" name="program" required>
-                        <option value="">-- Choose a Program --</option>
-                        <option value="Yoga & Meditation">Yoga & Meditation for Presence - €555</option>
-                        <option value="Voice Activation">Unlock Your Authentic Voice & Step Into Your Power - €888</option>
-                        <option value="Quantum Hypnosis">Collective Quantum Hypnosis Journey - €777</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="date">Preferred Date</label>
-                    <input type="date" id="date" name="date">
+                    <label>Select Programs (Choose one or more) *</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="program1" name="programs" value="Ground & Recharge">
+                            <label for="program1">Ground & Recharge - Yoga & Meditation Journeys</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="program2" name="programs" value="Unlock Your Authentic Voice">
+                            <label for="program2">Unlock Your Authentic Voice & Step Into Your Power</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="program3" name="programs" value="Collective Quantum Hypnosis">
+                            <label for="program3">Collective Quantum Hypnosis Journey</label>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="form-group">
@@ -754,7 +953,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Wellness Workshop Experience. All rights reserved. | Unlock Your Authentic Voice & Step Into Your Power</p>
+        <p>&copy; 2026 A Unique Transformational Wellness Experience for Festivals. All rights reserved.</p>
     </footer>
 </body>
 </html>
