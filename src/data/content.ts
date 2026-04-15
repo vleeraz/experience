@@ -47,8 +47,8 @@ export const navLinks = [
 
 export const programs: Program[] = [
   {
-    id: 'mid-reset',
-    title: 'Mid Reset',
+    id: 'mid-day-reset',
+    title: 'Mid-day Reset',
     subtitle: 'Breathwork & Meditation Journey',
     image: '/images/program1.jpg',
     features: [
@@ -185,7 +185,7 @@ export const galleryImages = [
 ];
 
 export const bookingPrograms = [
-  { label: 'Mid Reset', price: '€200 – €400' },
+  { label: 'Mid-day Reset', price: '€200 – €400' },
   { label: 'Energy & Performance Activation', price: '€400 – €600' },
   { label: 'A Moment of Rest in the Quantum Field', price: '€400 – €600' },
   { label: 'One Day Staff Retreat', price: '€1,500 – €3,000' },

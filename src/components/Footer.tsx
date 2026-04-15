@@ -6,10 +6,10 @@ export default function Footer() {
           <p className="text-base">
             <strong>Contact:</strong>{' '}
             <a
-              href="mailto:awakenwithyllka@gmail.com"
+              href="mailto:teamawaken.info@gmail.com"
               className="font-semibold hover:underline"
             >
-              awakenwithyllka@gmail.com
+              teamawaken.info@gmail.com
             </a>{' '}
             |{' '}
             <a href="tel:+38345267399" className="font-semibold hover:underline">
@@ -28,7 +28,7 @@ export default function Footer() {
           <p>
             Book your call →{' '}
             <a
-              href="https://calendly.com/"
+              href="https://calendly.com/awakenwithyllka/new-meeting"
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold hover:underline"
@@ -39,6 +39,9 @@ export default function Footer() {
         </div>
         <p className="text-sm text-orange/60">
           © {new Date().getFullYear()} A Unique Transformational Wellness Experience. All rights reserved.
+        </p>
+        <p className="text-xs text-orange/40">
+          created by <a href="https://exodia.media" target="_blank" rel="noopener noreferrer" className="hover:underline">exodia.media</a>
         </p>
       </div>
     </footer>

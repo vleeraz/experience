@@ -14,7 +14,10 @@ export default function Retreats() {
         <div className="grid md:grid-cols-2 gap-8">
           {retreats.map((retreat, i) => (
             <ScrollReveal key={retreat.id} delay={i * 150}>
-              <div className="group bg-white/65 backdrop-blur-sm rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full">
+              <a
+                href="#booking"
+                className="group bg-white/65 backdrop-blur-sm rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full block no-underline"
+              >
                 <div className="w-full h-56 bg-cream-light/50 flex items-center justify-center overflow-hidden">
                   <img
                     src={retreat.image}
@@ -53,16 +56,13 @@ export default function Retreats() {
                   )}
 
                   <p className="text-sm font-medium text-charcoal mt-auto">
-                    Investment{' '}
-                    <span className={retreat.price === 'Custom' ? '' : ''}>
-                      {retreat.price}
-                    </span>
+                    Investment {retreat.price}
                     {retreat.priceNote && (
                       <span className="font-normal text-charcoal-light"> {retreat.priceNote}</span>
                     )}
                   </p>
                 </div>
-              </div>
+              </a>
             </ScrollReveal>
           ))}
         </div>

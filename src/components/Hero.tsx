@@ -9,16 +9,6 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 text-center max-w-3xl animate-[fadeInUp_0.8s_ease-out]">
-        {/* Logo in glass shell */}
-        <div className="relative inline-flex items-center justify-center p-5 mb-8 rounded-3xl bg-white/15 border border-white/40 backdrop-blur-xl shadow-xl">
-          <div className="absolute -inset-4 rounded-[2rem] bg-white/10 blur-2xl -z-10" />
-          <img
-            src="/images/logo.png"
-            alt="Awaken With Yllka"
-            className="w-36 md:w-44 h-auto drop-shadow-lg"
-          />
-        </div>
-
         <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-normal text-charcoal leading-tight tracking-wide mb-4">
           A Unique Transformational Wellness Experience
         </h1>
@@ -35,7 +25,7 @@ export default function Hero() {
             Book Your Experience
           </a>
           <a
-            href="https://calendly.com/"
+            href="https://calendly.com/awakenwithyllka/new-meeting"
             target="_blank"
             rel="noopener noreferrer"
             className="px-7 py-3 bg-white/15 text-charcoal border border-charcoal/15 rounded-full font-medium hover:bg-white/25 hover:-translate-y-0.5 transition-all backdrop-blur-sm text-sm"

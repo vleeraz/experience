@@ -14,7 +14,10 @@ export default function Programs() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {programs.map((program, i) => (
             <ScrollReveal key={program.id} delay={i * 120}>
-              <div className="group bg-white/65 backdrop-blur-sm rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full">
+              <a
+                href="#booking"
+                className="group bg-white/65 backdrop-blur-sm rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col h-full block no-underline"
+              >
                 <div className="w-full h-64 bg-cream-light/50 flex items-center justify-center overflow-hidden">
                   <img
                     src={program.image}
@@ -49,7 +52,7 @@ export default function Programs() {
                     <span className="font-normal text-charcoal-light">{program.priceNote}</span>
                   </p>
                 </div>
-              </div>
+              </a>
             </ScrollReveal>
           ))}
         </div>
