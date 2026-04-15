@@ -174,14 +174,16 @@ export const testimonials: Testimonial[] = [
 ];
 
 export const galleryImages = [
-  '/images/retreat1.jpg',
-  '/images/retreat2.jpg',
-  '/images/program1.jpg',
-  '/images/program2.jpg',
-  '/images/program3.jpg',
-  '/images/yllka.jpg',
-  '/images/vlera.jpg',
-  '/images/logo.png',
+  '/images/gallery-1.jpeg',
+  '/images/gallery-2.jpeg',
+  '/images/gallery-3.jpeg',
+  '/images/gallery-4.jpeg',
+  '/images/gallery-5.jpeg',
+  '/images/gallery-6.jpeg',
+  '/images/gallery-7.jpeg',
+  '/images/gallery-8.jpeg',
+  '/images/gallery-9.jpeg',
+  '/images/gallery-10.jpeg',
 ];
 
 export const bookingPrograms = [
