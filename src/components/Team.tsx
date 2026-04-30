@@ -19,14 +19,14 @@ export default function Team() {
         <div className="grid md:grid-cols-2 gap-10">
           {teamMembers.map((member, i) => (
             <ScrollReveal key={member.id} delay={i * 150}>
-              <div className="group bg-white/60 backdrop-blur-sm p-8 md:p-10 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col sm:flex-row items-center sm:items-start gap-6">
+              <div className="group bg-white/60 backdrop-blur-sm p-8 md:p-10 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col lg:flex-row items-center lg:items-start gap-6">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-40 h-40 sm:w-48 sm:h-48 rounded-full object-cover shadow-lg border-2 border-orange/25 shrink-0"
+                  className="w-40 h-40 lg:w-48 lg:h-48 rounded-full object-cover shadow-lg border-2 border-orange/25 shrink-0"
                   loading="lazy"
                 />
-                <div className="text-center sm:text-left">
+                <div className="text-center lg:text-left">
                   <h3 className="font-display text-2xl font-normal text-charcoal mb-3 tracking-wide">
                     {member.name}
                   </h3>
