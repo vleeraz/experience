@@ -5,8 +5,6 @@ export interface Program {
   image: string;
   features: readonly string[];
   note?: string;
-  price: string;
-  priceNote: string;
 }
 
 export interface Retreat {
@@ -17,8 +15,6 @@ export interface Retreat {
   featured?: boolean;
   description?: string;
   extra?: string;
-  price: string;
-  priceNote?: string;
 }
 
 export interface TeamMember {
@@ -58,8 +54,6 @@ export const programs: Program[] = [
       'Restore energy and reduce fatigue',
     ],
     note: 'This program can also take place online.',
-    price: '€200 – €400',
-    priceNote: 'depending on group size',
   },
   {
     id: 'energy-activation',
@@ -72,8 +66,6 @@ export const programs: Program[] = [
       'Activate sustainable energy levels',
       'Return with clarity, focus and performance',
     ],
-    price: '€400 – €600',
-    priceNote: 'depending on group size',
   },
   {
     id: 'quantum-field',
@@ -86,8 +78,6 @@ export const programs: Program[] = [
       'Expand clarity, creativity and awareness',
       'Restore energy through universal life force energy',
     ],
-    price: '€400 – €600',
-    priceNote: 'depending on group size',
   },
 ];
 
@@ -105,8 +95,6 @@ export const retreats: Retreat[] = [
       'Team Connection & Integration Practices',
       'Optional Catering & Refreshments',
     ],
-    price: '€1,500 – €3,000',
-    priceNote: 'depending on group size',
   },
   {
     id: 'multi-day',
@@ -115,7 +103,6 @@ export const retreats: Retreat[] = [
     featured: true,
     description: 'An exclusive, all-inclusive retreat experience designed to restore energy, enhance performance and support holistic wellbeing through a carefully curated blend of practices.',
     extra: 'More information available and tailored to your specific needs.',
-    price: 'Custom',
   },
 ];
 
@@ -187,9 +174,9 @@ export const galleryImages = [
 ];
 
 export const bookingPrograms = [
-  { label: 'Mid-day Reset', price: '€200 – €400' },
-  { label: 'Energy & Performance Activation', price: '€400 – €600' },
-  { label: 'A Moment of Rest in the Quantum Field', price: '€400 – €600' },
-  { label: 'One Day Staff Retreat', price: '€1,500 – €3,000' },
-  { label: '2-3 Day All-Inclusive Staff Retreat', price: 'Custom' },
+  { label: 'Mid-day Reset' },
+  { label: 'Energy & Performance Activation' },
+  { label: 'A Moment of Rest in the Quantum Field' },
+  { label: 'One Day Staff Retreat' },
+  { label: '2-3 Day All-Inclusive Staff Retreat' },
 ];
