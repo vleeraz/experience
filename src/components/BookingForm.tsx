@@ -178,9 +178,6 @@ export default function BookingForm() {
                         className="w-5 h-5 accent-orange cursor-pointer shrink-0"
                       />
                       <span className="flex-1 text-sm text-charcoal">{p.label}</span>
-                      <span className="text-sm font-semibold text-orange whitespace-nowrap">
-                        {p.price}
-                      </span>
                     </label>
                   ))}
                 </div>

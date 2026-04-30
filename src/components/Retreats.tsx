@@ -54,13 +54,6 @@ export default function Retreats() {
                       {retreat.extra}
                     </p>
                   )}
-
-                  <p className="text-sm font-medium text-charcoal mt-auto">
-                    Investment {retreat.price}
-                    {retreat.priceNote && (
-                      <span className="font-normal text-charcoal-light"> {retreat.priceNote}</span>
-                    )}
-                  </p>
                 </div>
               </a>
             </ScrollReveal>

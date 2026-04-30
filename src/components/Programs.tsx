@@ -47,10 +47,6 @@ export default function Programs() {
                   {program.note && (
                     <p className="text-sm text-orange italic mb-2">{program.note}</p>
                   )}
-                  <p className="text-sm font-medium text-charcoal">
-                    Investment {program.price}{' '}
-                    <span className="font-normal text-charcoal-light">{program.priceNote}</span>
-                  </p>
                 </div>
               </a>
             </ScrollReveal>
